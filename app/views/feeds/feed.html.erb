@@ -1,0 +1,22 @@
+
+<table>
+  <caption><h1>
+    <span class="primary">MBT</span><span class="secondary">m</span><span class="primary">A</span><span class="secondary">nia!</span>
+  </h1></caption>
+
+  <thead>
+    <tr>
+      <% @feed.first.each do |column| %>
+        <th><%= column %></th>
+      <% end %>
+    </tr>
+  <tbody>
+    <% (1..@feed.length - 1).each do |row| %>
+      <tr>
+        <% @feed[row].each do |column| %>
+          <td><%= column %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
